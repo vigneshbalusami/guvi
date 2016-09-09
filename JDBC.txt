@@ -1,0 +1,24 @@
+CREATE DATABASE IF NOT EXISTS TASK;
+
+create database AddressBook;
+
+use AddressBook;
+
+create table contact_info(identity int primary key auto_increment, firstName varchar(256) not null, lastName varchar(128) default '',
+
+ phoneNumber varchar(20) default '', mobileNumber varchar(20), emailIdentity varchar(256) default '', website varchar(256) default '',
+
+ profilePicture mediumblob default '');
+
+CREATE TABLE `test`.`pic` (
+`idpic` INTEGER UNSIGNED NOT NULL AUTO_INCREMENT,
+`caption` VARCHAR(45) NOT NULL,
+`img` LONGBLOB NOT NULL,
+PRIMARY KEY(`idpic`)
+)
+TYPE = InnoDB; 
+
+
+create table task(identity int primary key, firstName varchar(256), emailIdentity varchar(256) default ' ' ,taskdate date,tasknumber int,taskupdate date ,tasklastdate date,file MEDIUMBLOB NOT NULL);
+
+insert into task(identity, firstName,  emailIdentity, taskdate, tasknumber,taskupdate,tasklastdate,file) values(1003, 'vignesh',  'msgtovp@gmail.com', '12/6/16',2,Now(),'15/6/16','C:\Users\Administrator\Desktop\test');
