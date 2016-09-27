@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student</title>
+<link rel="stylesheet" href="css/bootstrap.css">
+
+<link rel="stylesheet" href="theme.css">
+<meta charset="ISO-8859-1">
+<script type="text/javascript">
+var f=0,flag=0;
+var sec ={
+		"1" : "A",
+		"2" : "B",
+		"3" : "c",
+		"4" : "D",
+		"5" : "E",
+		"6" : "F"
+		};
+}
+var dep ={
+	"P": "CSE",
+	"F": "IT",
+	"M": "MECHANICAL",
+	"C": "CIVIL",
+	"l": "ECE",
+	"I": "E&I",
+	"N": "ETE",
+	"E": "EEE",
+	"A": "AUTO MOBILE",
+	"p": "CSE",
+	"f": "IT",
+	"m": "MECHANICAL",
+	"c": "CIVIL",
+	"l": "ECE",
+	"i": "E&I",
+	"n": "ETE",
+	"e": "EEE",
+	"a": "AUTO MOBILE"
+};
+
+function fun(){
+
+var add3=document.getElementsByClassName("roll");
+var add1=document.getElementsByClassName("add");
+var add2=document.getElementsByClassName("sdate");
+//var formattedDate = getDateString(new Date(date), "d-M-y");
+/*
+var today = new Date();
+var dd = today.getDate();
+var mm = today.getMonth()+1; //January is 0!
+
+var yyyy = today.getFullYear();
+	add2.value=dd+'/'+mm+'/'+yyyy;
+	*/
+	add1[0].addEventListener('change',function(){
+		var getval=document.getElementById("dep");
+		var val1=document.getElementById("roll").value;
+		var getsec = document.getElementById("sec");
+		if(dep[val1[2]])
+		getval.value=dep[val1[2]];
+		getsec.value=sec[val1[3]];
+		else{getval.value=null;
+		if(getval.value)
+		alert("value"+getval.value);
+			alert(dep[val1[2]]+"this is not coorect department");}
+	});
+	
+}
+
+window.addEventListener("load", fun);
+</script>
+</head>
+<body id="b1">
+<div	style="background-color  : #1E90FF">
+<nav class="navbar navbar-light bg-faded">
+  <a class="navbar-brand" href="index.html">Home</a>
+  <ul class="nav navbar-nav">
+    <li class="nav-item active">
+      <a class="nav-link" href="insert.html">Insert <span class="sr-only">(current)</span></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="update.html">Update</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="delete.html">Delete</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="view">view</a>
+    </li>
+  </ul>
+</nav>
+</div>
+
+	<div id="div1">
+	<form action="Task" method="Post">
+		<label>RollNo:</label><input class="add" id="roll"  type="text"  name="roll" /><br>
+		<label>Name:</label><input class="add" id="nam" type="text" name="nam" /><br>
+		<span class="add"><label >Gender</label>
+		<input type="radio" id="gender" value="male"  name="gender" />Male
+		<input type="radio" id="gender" value="female"  name="gender" />Female
+		<input type="radio" id="gender" value="other"  name="gender" />Others<br></span>
+		<label>Department:</label><input class="add" id="dep" type="text" name="dep" /><br>
+		<label>Section:</label><input class="add" id="sec" type="text" name="sec" /><br>
+		<label>Task Id:</label><input class="add" id="task" type="text" name="task" /><br>
+		<label>Email:</label><input class="add" id="mail" type="email" name="mail" /><br>
+			
+				<label>File Name:</label><input class="add" id="file" type="text" name="file" /><br>
+				 <input type = "submit" value = "Login"/>
+				
+		
+		</form>
+	</div>
+</body>
+</html>
