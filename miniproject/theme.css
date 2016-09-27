@@ -1,0 +1,26 @@
+@CHARSET "ISO-8859-1";@CHARSET "ISO-8859-1";
+input{
+	padding: 20px,20px;
+	margin: 8px 0;
+   
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+#upload{
+	margin: 8px 0;
+   
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color:#00FFFF;
+}
+#div1{
+	
+	width: 50%;
+	margin: 0 auto;
+    background-color:	#D6DBDF;
+}
+ #b1{
+ 	 background-color:	#F8F8FF;
+ }
